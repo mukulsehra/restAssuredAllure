@@ -11,7 +11,7 @@ public class UniqueCharacterCountInString {
 		else {
 		
 		for(char c : s.toCharArray()) {
-			String sChar = String.valueOf(c);
+			String sChar = String.valueOf(c).toUpperCase();
 			if(charRecords.containsKey(sChar)) {
 				charRecords.put(sChar, charRecords.get(sChar) + 1);
 				
@@ -27,6 +27,6 @@ public class UniqueCharacterCountInString {
 	
 	public static void main(String str[]) {
 		UniqueCharacterCountInString u = new UniqueCharacterCountInString();
-		u.countUniqueChar("aba");
+		u.countUniqueChar("AryanDhawan");
 	}
 }
