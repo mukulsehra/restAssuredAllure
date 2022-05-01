@@ -30,7 +30,7 @@ public class RestAllureTest {
       res.then().log().all();
       String val = String.valueOf(((HashMap<Object, Object>)res.then().extract().body().jsonPath().getList("$").get(0)).get("bookingid"));
       System.out.println(val);
-      Assert.assertTrue(val.isBlank(), "The booking id is not blank. It's value is : " + val);
+      Assert.assertFalse(val.isBlank(), "The booking id is not blank. It's value is : " + val);
     }
     
     @Test(description = "GET Booking details corresponding to a booking id")
